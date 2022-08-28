@@ -1,0 +1,13 @@
+<?php
+declare(strict_types=1);
+$helper = $this->helper('Abhay\DisableRightClick\Helper\Data');
+$enable=$helper->isEnabled();
+$imageEnable=$helper->isImageEnabled();
+?>
+<?php if($enable){ ?>
+    <div data-mage-init='{"disableClick": {}}'></div>
+<?php } ?>
+<?php if($imageEnable){ ?>
+    <div data-mage-init='{"disableImageClick": {}}'></div>
+<?php } ?>
+
